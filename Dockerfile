@@ -52,4 +52,6 @@ EXPOSE 80
 EXPOSE 443
 # End Nginx-PHP
 
+VOLUME ["/data"]
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
