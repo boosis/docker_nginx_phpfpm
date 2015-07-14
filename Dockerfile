@@ -38,6 +38,9 @@ RUN rm -rf /etc/nginx/sites-available/default
 RUN rm -rf /etc/nginx/sites-enabled/default
 ADD vhost.conf /etc/nginx/sites-enabled/default
 
+RUN sed -i "s#{{NGINX_SERVER_NAME}}#${NGINX_SERVER_NAME}#g" /etc/nginx/sites-enabled/default
+RUN sed -i "s#{{NGINX_ROOT}}#${NGINX_ROOT}#g" /etc/nginx/sites-enabled/default
+
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
