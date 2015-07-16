@@ -1,4 +1,4 @@
-FROM dyln/docker-barebone:latest
+FROM dyln/barebone:latest
 
 RUN rm -rf /etc/nginx/sites-available/default
 RUN rm -rf /etc/nginx/sites-enabled/default
