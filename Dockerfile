@@ -2,8 +2,10 @@ FROM dyln/barebone:latest
 
 RUN rm -rf /etc/nginx/sites-available/default && \
     rm -rf /etc/nginx/sites-enabled/default && \
+    rm -rf /etc/service/nginx/run && \
+    rm -rf /etc/service/phpfpm/run && \
     mkdir /etc/service/nginx && \
-    mkdir /etc/service/phpfpm \
+    mkdir /etc/service/phpfpm
 
 COPY nginx.sh        /etc/service/nginx/run
 COPY phpfpm.sh       /etc/service/phpfpm/run
