@@ -17,5 +17,3 @@ RUN chmod +x /etc/service/nginx/run && \
 
 EXPOSE 80
 EXPOSE 443
-
-VOLUME ["/data"]
